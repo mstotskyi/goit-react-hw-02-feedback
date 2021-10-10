@@ -1,8 +1,15 @@
+import PropTypes from 'prop-types';
+import styles from 'components/Section/Section.module.css';
 export default function Section({ title, children }) {
   return (
-    <section className="App">
-      <h1 className="title">{title}</h1>
+    <section className={styles.section}>
+      <h1 className={styles.title}>{title}</h1>
       {children}
     </section>
   );
 }
+
+Section.propZTypes = {
+  title: PropTypes.string,
+  children: PropTypes.any,
+};
